@@ -1,11 +1,13 @@
+const isTest = String(process.env.NODE_ENV) === 'test';
 module.exports = {
-  presets: [['env', {modules: false}], 'react'],
+  presets: [['@babel/env', {modules: isTest ? 'commonjs' : false}], '@babel/react'],
   plugins: [
     'syntax-dynamic-import',
     'transform-class-properties',
     'transform-object-rest-spread',
-  ],
-}
+    isTest ? 'dynamic-import-node' : null
+  ].filter(Boolean),
+};
 
 /*
 Solution snippets below

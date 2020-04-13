@@ -1,25 +1,9 @@
-// Your job:
-// Test the case where the items provided is empty:
-//   <ItemList items={[]} />
-// Test the case where there are items in the list:
-//   <ItemList items={['apple', 'orange', 'pear']} />
-//
-// Don't overthink it. This is just a practice run to warm you up
-// to testing react components.
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ItemList from '../item-list';
 
-// So you can use JSX (which transpiles down to React.createElement):
-// import React from 'react'
-//
-// So you can render the component for testing:
-// import ReactDOM from 'react-dom'
-//
-// So you can create a react element for the component you're testing:
-// import ItemList from '../item-list'
-
-// and here's an outline example of your first test:
-//   Create a "container" to render your component into (tip: use document.createElement('div'))
-//
-//   Render your component (tip: use ReactDOM.render(JSX, container))
+/*const container = document.createElement('div');
+ReactDOM.render(<ItemList/>, container);*/
 //
 //   Make your assertion(s) on the textContent of the container
 //   (tip: expect's toMatch function might be what you want
@@ -36,8 +20,16 @@
 /*
 http://ws.kcd.im/?ws=Testing&e=basic%20react%20test&em=
 */
-test.skip('I submitted my elaboration and feedback', () => {
-  const submitted = false // change this when you've submitted!
-  expect(submitted).toBe(true)
-})
-////////////////////////////////
+test('simple react test', () => {
+	const container = document.createElement('div');
+	ReactDOM.render(<ItemList items={[]}/>, container);
+	expect(container.textContent).toMatch('no items');
+
+});
+
+test('simple react test2', () => {
+	const container = document.createElement('div');
+	ReactDOM.render(<ItemList items={['apple', 'orange', 'pear']}/>, container);
+	expect(container.textContent).toMatch('apple');
+
+});
