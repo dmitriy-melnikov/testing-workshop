@@ -18,7 +18,7 @@ beforeEach(() => {
   initAPI()
 })
 
-test('snapshot', async () => {
+xtest('snapshot', async () => {
   // setup things to simulate being logged in
   const {get} = axiosMock.__mock.instance
   const fakeToken = 'my.fake.token'

@@ -7,7 +7,7 @@ import Login from '../login'
 // then you can get automatic cleanup of any components rendered like this:
 afterEach(cleanup)
 
-test('calls onSubmit with the username and password when submitted', () => {
+xtest('calls onSubmit with the username and password when submitted', () => {
   // Arrange
   const fakeUser = generate.loginForm()
   const handleSubmit = jest.fn()

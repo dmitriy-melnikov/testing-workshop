@@ -18,7 +18,7 @@ beforeEach(() => {
   initAPI()
 })
 
-test('login as an existing user', async () => {
+xtest('login as an existing user', async () => {
   const {
     getByTestId,
     container,

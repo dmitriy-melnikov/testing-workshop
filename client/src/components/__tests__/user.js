@@ -35,12 +35,12 @@ beforeEach(() => {
   apiMock.reset()
 })
 
-test('attempts to get the current user on mount', async () => {
+xtest('attempts to get the current user on mount', async () => {
   await setup()
   expect(apiMock.auth.me).toHaveBeenCalledTimes(1)
 })
 
-test('login rerenders with the retrieved user', async () => {
+xtest('login rerenders with the retrieved user', async () => {
   const {children, controller} = await setup()
   const fakeUser = {username: generate.username()}
   apiMock.auth.login.mockImplementationOnce(() =>
@@ -69,7 +69,7 @@ test('login rerenders with the retrieved user', async () => {
   )
 })
 
-test('logout rerenders with a null user', async () => {
+xtest('logout rerenders with a null user', async () => {
   const {children, controller} = await setup()
   controller.logout()
   expect(apiMock.auth.logout).toHaveBeenCalledTimes(1)
@@ -90,7 +90,7 @@ test('logout rerenders with a null user', async () => {
   )
 })
 
-test('on register failure, rerenders with the error', async () => {
+xtest('on register failure, rerenders with the error', async () => {
   const {children, controller} = await setup()
   const fakeError = {mock: 'failure'}
   apiMock.auth.register.mockImplementationOnce(() =>

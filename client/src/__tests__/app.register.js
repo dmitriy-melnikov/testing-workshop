@@ -19,7 +19,7 @@ beforeEach(() => {
   initAPI()
 })
 
-test('register a new user', async () => {
+xtest('register a new user', async () => {
   const {
     container,
     getByTestId,

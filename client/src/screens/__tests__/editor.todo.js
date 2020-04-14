@@ -18,11 +18,11 @@ const flashPromises = () => {
 }
 
 test('calls onSubmit with the username and password when submitted', async () => {
-  const container = document.createElement('div')
-  const fakeUser = {id: 'fale'}
+  const container = document.createElement('div');
+  const fakeUser = {id: 'fale'};
   const fakeHistory = {
     push: jest.fn(),
-  }
+  };
 
   ReactDOM.render(<Editor user={fakeUser} history={fakeHistory} />, container)
   const form = container.querySelector('form')

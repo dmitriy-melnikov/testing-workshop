@@ -8,7 +8,7 @@ function Login({onSubmit}) {
       <Form
         onSubmit={e => {
           e.preventDefault()
-          const {username, password} = e.target.elements
+          const {username, password} = e.target.elements;
           onSubmit({
             username: username.value,
             password: password.value,

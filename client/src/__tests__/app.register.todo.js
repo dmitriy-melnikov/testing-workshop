@@ -1,7 +1,7 @@
 // Hi! This is for the instructor :)
 // add a beforeEach for cleaning up state and intitializing the API
 
-test('register a new user', async () => {
+xtest('register a new user', async () => {
   // render the app with the router provider and custom history
   //
   // wait for the app to finish loading the mocked requests

@@ -1,7 +1,7 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
 const renderer = require('react-test-renderer')
-const {getFlyingSuperHeros} = require('../super-heros')
+const { getFlyingSuperHeros } = require('../super-heros')
 /*
 Find a full list of assertions here: https://facebook.github.io/jest/docs/en/expect.html
 */

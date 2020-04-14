@@ -19,7 +19,7 @@ beforeEach(() => {
   initAPI()
 })
 
-test('create post', async () => {
+xtest('create post', async () => {
   // setup things to simulate being logged in
   const {get, post} = axiosMock.__mock.instance
   const fakeToken = 'my.fake.token'

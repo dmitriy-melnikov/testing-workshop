@@ -4,7 +4,7 @@ module.exports = {
   testEnvironmentOptions: {
     url: 'https://til.test.com',
   },
-  testPathIgnorePatterns: ['/node_modules/', '/helpers/'],
+  testPathIgnorePatterns: ['/node_modules/', '/helpers/', '/screens/'],
   setupTestFrameworkScriptFile: require.resolve(
     './test/setup-test-framework.js',
   ),

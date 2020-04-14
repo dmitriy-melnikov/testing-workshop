@@ -5,7 +5,7 @@ import Login from '../login'
 
 afterEach(cleanup)
 
-test('calls onSubmit with the username and password when submitted', () => {
+xtest('calls onSubmit with the username and password when submitted', () => {
   // Arrange
   const fakeUser = generate.loginForm()
   const handleSubmit = jest.fn()
@@ -26,7 +26,7 @@ test('calls onSubmit with the username and password when submitted', () => {
   expect(handleSubmit).toHaveBeenCalledWith(fakeUser)
 })
 
-test('snapshot', () => {
+xtest('snapshot', () => {
   // note that we don't need to render this into the document so we'll just
   // use a regular `render` here.
   const {container} = render(<Login />)

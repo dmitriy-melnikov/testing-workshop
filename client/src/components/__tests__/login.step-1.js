@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Login from '../login'
 
-test('calls onSubmit with the username and password when submitted', () => {
+xtest('calls onSubmit with the username and password when submitted', () => {
   // Arrange
   const fakeUser = {username: 'chucknorris', password: '(╯°□°）╯︵ ┻━┻'}
   const handleSubmit = jest.fn()
