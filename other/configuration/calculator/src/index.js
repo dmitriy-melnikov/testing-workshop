@@ -1,10 +1,10 @@
 import './global.css'
-import React from 'react'
+import React, {Fragment} from 'react'
 import ReactDOM from 'react-dom'
 import Calculator from './calculator'
 
 ReactDOM.render(
-  <React.Fragment>
+  <Fragment>
     <Calculator />
     <div style={{marginTop: 30, textAlign: 'center'}}>
       Calculator component{' '}
@@ -13,6 +13,6 @@ ReactDOM.render(
       <a href="https://twitter.com/mjackson">Michael Jackson</a> of{' '}
       <a href="https://reacttraining.com/">React Training</a>
     </div>
-  </React.Fragment>,
+  </Fragment>,
   document.getElementById('app'),
-)
+);
