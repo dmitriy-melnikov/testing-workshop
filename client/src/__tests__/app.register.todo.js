@@ -1,12 +1,32 @@
 // Hi! This is for the instructor :)
 // add a beforeEach for cleaning up state and intitializing the API
 
+import React from 'react'
+import {Simulate} from 'react-dom/test-utils'
+import axiosMock from 'axios'
+import { renderWithRouter, generate } from '../../test/til-client-test-utils'
+import {init as initAPI} from '../utils/api'
+import App from '../app'
+
+/*beforeEach(() => {
+  window.localStorage.removeItem('token');
+  axiosMock.__mock.reset()
+  initAPI()
+});*/
+
 xtest('register a new user', async () => {
-  // render the app with the router provider and custom history
-  //
-  // wait for the app to finish loading the mocked requests
-  //
-  // navigate to register by clicking register-link
+	const {
+		container,
+		getByTestId,
+		getByText,
+		finishLoading,
+		getByLabelText,
+	} = renderWithRouter(<App />)
+	await finishLoading()
+	const leftClick = {button: 0}
+	Simulate.click(getByText('Register'), leftClick)
+	expect(window.location.href).toContain('register')
+
   //
   // fill out the form
   //

@@ -13,11 +13,11 @@ import {renderWithRouter, generate} from 'til-client-test-utils'
 import {init as initAPI} from '../utils/api'
 import App from '../app'
 
-beforeEach(() => {
+/*beforeEach(() => {
   window.localStorage.removeItem('token')
   axiosMock.__mock.reset()
   initAPI()
-})
+})*/
 
 xtest('create post', async () => {
   // setup things to simulate being logged in

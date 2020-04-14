@@ -9,15 +9,15 @@
 import React from 'react'
 import {Simulate} from 'react-dom/test-utils'
 import axiosMock from 'axios'
-import {renderWithRouter, generate} from 'til-client-test-utils'
+import {renderWithRouter, generate} from '../../test/til-client-test-utils'
 import {init as initAPI} from '../utils/api'
 import App from '../app'
 
-beforeEach(() => {
+/*beforeEach(() => {
   window.localStorage.removeItem('token')
   axiosMock.__mock.reset()
   initAPI()
-})
+})*/
 
 xtest('register a new user', async () => {
   const {

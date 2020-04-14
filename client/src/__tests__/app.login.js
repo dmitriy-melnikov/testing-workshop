@@ -12,11 +12,11 @@ import {renderWithRouter, generate, Simulate} from 'til-client-test-utils'
 import {init as initAPI} from '../utils/api'
 import App from '../app'
 
-beforeEach(() => {
+/*beforeEach(() => {
   window.localStorage.removeItem('token')
   axiosMock.__mock.reset()
   initAPI()
-})
+})*/
 
 xtest('login as an existing user', async () => {
   const {
