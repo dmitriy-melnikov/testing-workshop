@@ -120,15 +120,16 @@ Snapshot tests below. We'll cover these later
  */
 
 test('manual "snapshot"', () => {
-  const flyingHeros = getFlyingSuperHeros()
+  const flyingHeros = getFlyingSuperHeros();
   expect(flyingHeros).toEqual([
-    {name: 'Dynaguy', powers: ['disintegration ray', 'fly']},
-    {name: 'Apogee', powers: ['gravity control', 'fly']},
+		{ name: 'Dynaguy', powers: [ 'disintegration ray', 'fly' ] },
+		{ name: 'Apogee', powers: [ 'gravity control', 'fly' ] },
+		{ name: 'Jack-Jack', powers: [ 'shapeshifting', 'fly' ] }
   ])
 })
 
 test('automatic snapshot', () => {
-  const flyingHeros = getFlyingSuperHeros()
+  const flyingHeros = getFlyingSuperHeros();
   expect(flyingHeros).toMatchSnapshot()
 })
 
@@ -167,4 +168,4 @@ test('snapshot examples', () => {
   const app = document.createElement('div')
   ReactDOM.render(element, app)
   expect(app).toMatchSnapshot('react-dom')
-})
+});

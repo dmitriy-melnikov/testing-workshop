@@ -7,8 +7,8 @@ const superHeros = [
   {name: 'Elastigirl', powers: ['physical stretch']},
   {name: 'Violet', powers: ['invisibility', 'force fields']},
   {name: 'Dash', powers: ['speed']},
-  // {name: 'Jack-Jack', powers: ['shapeshifting', 'fly']},
-]
+  {name: 'Jack-Jack', powers: ['shapeshifting', 'fly']},
+];
 
 function getFlyingSuperHeros() {
   return superHeros.filter(hero => {
